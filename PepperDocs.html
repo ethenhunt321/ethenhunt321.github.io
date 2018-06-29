@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pepper Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        LoadHeaderFooter();
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Installation</h1>
+                <h4> For Visual Studio IDE, the laziest way is to look on nuget package manager. Search with keyword pepper.</h4>
+            </div>
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Integration</h1>
+                <h4> Pepper must be integrated in a file where test runner looks at it in each time before closing the test cases.  </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Coded UI</h2>
+                <h5>Implementation must be done in method with [TestCleanup] attribute.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Selenium</h2>
+                <h5>Implementation must be done in method with [TearDown] attribute.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Specfow</h2>
+                <h5>Implementation must be done in method with [AfterScenarioBlock] attribute.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h2>Text Logs</h2>
+                <h5>Present under Pepper namespace. Logs each activities during automation.</h5>
+                <p>
+                    <b>Logs.WriteLog(logs,"C:\\Pepper\\Logs");</b>
+                    <ul>
+                        <li><b>logs</b>:- Type of StringBuilder class. Give here all logs.</li>
+                        <li><b>Directory</b>:- Type of String. Type here a directory name where logs to be entered.</li>
+                        <li><b>Note</b>:- The Logs contains elapsed time, execution entry date, text executor machine name along with OS info. </li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>SQL Logs</h2>
+                <h5>Present under Pepper namespace. Trace down each test activities into SQL Server.</h5>
+                <p>
+                    <b>Logs.WriteLogsInSql("Login", "Password", "Server",sb);</b>
+                    <ul>
+                        <li><b>Login</b>:- Type of String class. Give here SQl login name.</li>
+                        <li><b>Password</b>:- Type of String. Type here SQL password.</li>
+                        <li><b>Server</b>:- Type of String. Type here SQL Server name.</li>
+                        <li><b>sb</b>:- Type of StringBuilder class. Give here all logs.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>Mongo Logs</h2>
+                <h5>Present under Pepper namespace. Keeps test activities records in Mongo DB.</h5>
+                <p>
+                    <b>Logs.WriteLogsInMongoDB("logs", "[connectionString]");</b>
+                    <ul>
+                        <li><b>logs</b>:- Type of StringBuilder class. Give here all logs.</li>
+                        <li><b>connectionString</b>:- Type of String. Type here connectionString.</li>
+                        <li><b>Note</b>:- ConnectionString is optional parameter, if not provided by user then create DB in local machine.</li>
+                    </ul>
+                </p>
+            </div>
+
+            
+        </div>
+        
+
+        <div class="row chiliDocs well">
+            <a href="https://www.nuget.org/packages/Pepper">
+                <div class="col-sm-12">
+                    <h2 style="color: burlywood;"> Let's Go !</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="Footer"></div>
+
+</body>
+</html>
+
+
+
+
+
+

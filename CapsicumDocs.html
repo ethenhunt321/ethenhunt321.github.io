@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Capsicum Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        LoadHeaderFooter();
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Installation</h1>
+                <h4> For Visual Studio IDE, the laziest way is to look on nuget package manager. Search with keyword pepper.</h4>
+            </div>
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Integration</h1>
+                <h4> Pepper must be integrated in a file where test runner looks at it in each time before closing the test cases.  </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Coded UI</h2>
+                <h5>Can be implemented wherever requied.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Selenium</h2>
+                <h5>Can be implemented wherever requied.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Specfow</h2>
+                <h5>Can be implemented wherever requied.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h2>GetDetails&lt;T&gt;</h2>
+                <h5>Present under Capsicum namespace. Get detials from an api in a given type</h5>
+                <p>
+                    <b>List&lt;T&gt; allTyped=new ConsumeJsonAPI().GetDetails<T>(api);</b>
+                    <ul>
+                        <li><b>api</b>:- Type of String class. Give here an api url.</li>
+                        <li><b>allTyped</b>:- Type of List&lt;T&gt; this will be return type.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>GetDetails</h2>
+                <h5>Present under Capsicum namespace. Get detials from an api in string type</h5>
+                <p>
+                    <b>String NoTyped=new ConsumeJsonAPI().GetDetails(api);</b>
+                    <ul>
+                        <li><b>api</b>:- Type of String class. Give here an api url.</li>
+                        <li><b>NoTyped</b>:- Type of String. this will be return type.</li>
+                    </ul>
+                </p>
+            </div>
+
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>GetDetails&lt;T&gt;</h2>
+                <h5>Present under Capsicum namespace. Get detials from an api in a given type and for a given id.</h5>
+                <p>
+                    <b>T Typed=new ConsumeJsonAPI().GetDetails<T>(api,id);</b>
+                    <ul>
+                        <li><b>api</b>:- Type of String class. Give here an api url.</li>
+                        <li><b>id</b>:- Type of String class. Give here an api unique id</li>
+                        <li><b>Typed</b>:- Type of T. this will be return type.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>GetDetails</h2>
+                <h5>Present under Capsicum namespace. Get detials from an api in a given type and for a given id.</h5>
+                <p>
+                    <b>String NoTyped=new ConsumeJsonAPI().GetDetails(api,id);</b>
+                    <ul>
+                        <li><b>api</b>:- Type of String class. Give here an api url.</li>
+                        <li><b>id</b>:- Type of String class. Give here an api unique id</li>
+                        <li><b>Typed</b>:- Type of String. this will be return type.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>SetDetails&lt;T&gt;</h2>
+                <h5>Present under Capsicum namespace. Set detials using an api in a given type.</h5>
+                <p>
+                    <b>HttpResponseMessage Typed=new ConsumeJsonAPI().SetDetails<T>(api,t);</b>
+                    <ul>
+                        <li><b>api</b>:- Type of String class. Give here an api url.</li>
+                        <li><b>t</b>:- Type of T class. This will be instance of T.</li>
+                        <li><b>Typed</b>:- Type of HttpResponseMessage. this will be return type.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>UpdateDetails&lt;T&gt;</h2>
+                <h5>Present under Capsicum namespace. Update detials using an api in a given type.</h5>
+                <p>
+                    <b>HttpResponseMessage Typed=new ConsumeJsonAPI().UpdateDetails<T>(api,t);</b>
+                    <ul>
+                        <li><b>api</b>:- Type of String class. Give here an api url.</li>
+                        <li><b>t</b>:- Type of T class. This will be instance of T.</li>
+                        <li><b>Typed</b>:- Type of HttpResponseMessage. this will be return type.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-sm-6 well chiliDocs">
+                <h2>DeleteDetails</h2>
+                <h5>Present under Capsicum namespace. Delete detials using an api for a given id.</h5>
+                <p>
+                    <b>HttpResponseMessage Typed=new ConsumeJsonAPI().DeleteDetails(api);</b>
+                    <ul>
+                        <li><b>api</b>:- Type of String class. Give here an api url.</li>
+                        <li><b>Typed</b>:- Type of HttpResponseMessage. this will be return type.</li>
+                    </ul>
+                </p>
+            </div>
+
+
+        </div>
+        
+
+        <div class="row chiliDocs well">
+            <a href="https://www.nuget.org/packages/Capsicum">
+                <div class="col-sm-12">
+                    <h2 style="color: burlywood;"> Let's Go !</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="Footer"></div>
+
+</body>
+</html>
+
+
+
+
+
+

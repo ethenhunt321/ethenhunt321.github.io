@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chili Service</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        LoadHeaderFooter();
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+
+    <div class="row Margins">
+        <div class="col-sm-4" style="margin-bottom:5%;">
+            <h1 class="headingFontWithMargin"> Chili - get it now with four services support</h1>
+            <div>
+                <br />
+                <a class="btn btn-primary btn-lg" href="https://www.nuget.org/packages/Chili.Amardeep_Agrawal/" style="background-color:#39b54a">Get Now for .NET</a>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <img src="./Images/chiliService.png" class="img-responsive" style="" />
+        </div>
+    </div>
+
+    <div class="row Margins" style="background-color:#f5f5f5;">
+        <div class="col-sm-12 text-center">
+            <h1 class="headingFont">chili - a tiny nuget package that helps in automation analytics on top</h1>
+        </div>
+    </div>
+
+    <div class="row Margins" style="background-color:#f5f5f5;">
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="outlook" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Mail your analysis</h2>
+            <p class="contentFont">Now get more done, Comes with your customized message.</p>
+        </div>
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="excel" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Do more with excel</h2>
+            <p class="contentFont">Manage your feature specific analysis along with commutative</p>
+        </div>
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="dhtml" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Interact with analysis as website</h2>
+            <p class="contentFont">Dynamic interaction with analyis with great responsiveness</p>
+        </div>
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="json" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Recycle your needs with JSON</h2>
+            <p class="contentFont">A light weight but more powerful, enough able to induge with needs</p>
+        </div>
+    </div>
+
+
+    <div class="row Margins">
+        <div class="col-sm-7 text-center">
+            <img src="./Images/chiliService1.png" class="img-responsive"/>
+        </div>
+        <div class="col-sm-5 text-center"><h1 class="headingFontWithMargin">available for others - now explore more chili with specflow and selenium</h1></div>
+    </div>
+
+    <div id="Footer"></div>
+
+    <script>
+        Draw('outlook', 'excel', 'dhtml', 'json');
+
+        function Draw(canvasId1, canvasId2, canvasId3, canvasId4) {
+
+            var outlookmycanvas = document.getElementById(canvasId1);
+            var outlook = outlookmycanvas.getContext('2d');
+
+            x = 40; //start point
+            y = 40; //start point
+            paddingx = 40;
+            paddingy = 40;
+            eachSide = 200;
+
+            outlook.lineWidth = 4;
+            outlook.strokeStyle = 'blue';
+
+            //left most line
+            outlook.moveTo(x, y);
+            outlook.lineTo(x, eachSide - 2 * paddingy);
+            outlook.stroke();
+
+            //right most line
+            outlook.moveTo(eachSide - paddingx, y);
+            outlook.lineTo(eachSide - paddingx, eachSide - 2 * paddingy);
+            outlook.stroke();
+
+            //middle line
+            outlook.moveTo(eachSide - 2 * paddingx, paddingy / 2);
+            outlook.lineTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy + paddingy / 2);
+            outlook.stroke();
+
+            //joing left line to middile line upper part
+            outlook.moveTo(x, y);
+            outlook.lineTo(eachSide - 2 * paddingx, paddingy / 2);
+            outlook.stroke();
+
+            //joing left line to middile line lower part
+            outlook.moveTo(x, eachSide - 2 * paddingy);
+            outlook.lineTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy + paddingy / 2);
+            outlook.stroke();
+
+            //joing middle line to right line upper part
+            outlook.moveTo(eachSide - 2 * paddingx, y);
+            outlook.lineTo(eachSide - paddingx, y);
+            outlook.stroke();
+
+            //joing middle line to right line lower part
+            outlook.moveTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy);
+            outlook.lineTo(eachSide - paddingx, eachSide - 2 * paddingy);
+            outlook.stroke();
+
+            //making v symbol
+            outlook.moveTo(x + eachSide - 2 * paddingx, y);
+            outlook.lineTo(eachSide - paddingx / 4 - (eachSide - 2 * paddingx) / 2, eachSide / 2 - paddingy / 2);
+            outlook.stroke();
+
+            outlook.moveTo(eachSide - paddingx / 4 - (eachSide - 2 * paddingx) / 2, eachSide / 2 - paddingy / 2);
+            outlook.lineTo(eachSide - paddingx / 2 - (eachSide - 2 * paddingx) / 2, eachSide / 2 - paddingy);
+            outlook.stroke();
+
+            //printing o
+            outlook.lineWidth = 8;
+            outlook.font = "60px Segoi UI";
+            outlook.strokeText("O", x + x / 2, eachSide - 2 * y - y / 2);
+
+            //excel
+            var excelmycanvas = document.getElementById(canvasId2);
+            var excel = excelmycanvas.getContext('2d');
+
+            excel.strokeStyle = 'green';
+            excel.lineWidth = 4;
+
+            //left most line
+            excel.moveTo(x, y);
+            excel.lineTo(x, eachSide - 2 * paddingy);
+            excel.stroke();
+
+            //right most line
+            excel.moveTo(eachSide - paddingx, y);
+            excel.lineTo(eachSide - paddingx, eachSide - 2 * paddingy);
+            excel.stroke();
+
+            //middle line
+            excel.moveTo(eachSide - 2 * paddingx, paddingy / 2);
+            excel.lineTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy + paddingy / 2);
+            excel.stroke();
+
+            //joing left line to middile line upper part
+            excel.moveTo(x, y);
+            excel.lineTo(eachSide - 2 * paddingx, paddingy / 2);
+            excel.stroke();
+
+            //joing left line to middile line lower part
+            excel.moveTo(x, eachSide - 2 * paddingy);
+            excel.lineTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy + paddingy / 2);
+            excel.stroke();
+
+            //joing middle line to right line upper part
+            excel.moveTo(eachSide - 2 * paddingx, y);
+            excel.lineTo(eachSide - paddingx, y);
+            excel.stroke();
+
+            //joing middle line to right line lower part
+            excel.moveTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy);
+            excel.lineTo(eachSide - paddingx, eachSide - 2 * paddingy);
+            excel.stroke();
+
+            //cells
+            excel.moveTo(eachSide - 2 * paddingx + paddingx / 2 - 5, y)
+            excel.lineTo(eachSide - 2 * paddingx + paddingx / 2 - 5, eachSide - 2 * paddingy)
+            excel.stroke();
+
+            excel.moveTo(eachSide - 2 * paddingx, y + (eachSide - 2 * paddingy) / 6)
+            excel.lineTo(eachSide - paddingx, y + (eachSide - 2 * paddingy) / 6);
+            excel.stroke();
+
+            excel.moveTo(eachSide - 2 * paddingx, y + (eachSide - 2 * paddingy) / 3)
+            excel.lineTo(eachSide - paddingx, y + (eachSide - 2 * paddingy) / 3);
+            excel.stroke();
+
+            excel.moveTo(eachSide - 2 * paddingx, y + (eachSide - 2 * paddingy) / 2)
+            excel.lineTo(eachSide - paddingx, y + (eachSide - 2 * paddingy) / 2);
+            excel.stroke();
+
+            //printing x
+            excel.lineWidth = 2;
+            excel.font = "60px Segoi UI";
+            excel.strokeText("X", x + x / 2, eachSide - 2 * y - y / 2);
+
+            //html
+            var htmlmycanvas = document.getElementById(canvasId3);
+            var html = htmlmycanvas.getContext('2d');
+
+            html.strokeStyle = 'purple'
+            html.lineWidth = 10;
+            html.font = "60px Segoi UI";
+            html.strokeText("< / >", x, eachSide / 2 - paddingy / 2);
+
+            //json
+            var jsonmycanvas = document.getElementById(canvasId4);
+            var json = jsonmycanvas.getContext('2d');
+
+            json.strokeStyle = '#6847aa'
+            json.lineWidth = 10;
+            json.font = "60px Segoi UI";
+            json.strokeText("{ ; }", x, eachSide / 2 - paddingy / 2);
+
+
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

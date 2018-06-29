@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js'></script>
+
+    <script>
+        LoadHeaderFooter();
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+
+    <section style="background-color:#39b54a">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="https://www.nuget.org/packages/Chili.Amardeep_Agrawal/">
+                        <h3 class="Font">Open Source Reporting Package</h3>
+                    </a>
+                    <canvas id="myCanvas1" width="360" height="400"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#">
+                        <h3 class="Font">Open Source Api Consumer</h3>
+                    </a>
+                    <canvas id="myCanvas2" width="360" height="200"></canvas>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                            Coming Soon !
+                        </div>
+                    </div>
+                    <canvas id="myCanvas2and" width="360" height="150"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://www.nuget.org/packages/Pepper">
+                        <h3 class="Font">Open Source Logging Package</h3>
+                    </a>
+                    <canvas id="myCanvas3" width="360" height="400"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="Font">Cosmo of automation <span>&#9965;<sup>&#9965;</sup></span></h1>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="sectionGradChili">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="Font">Chili helps in anaytics using .NET</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <canvas id="myCanvas4" width="330" height="400"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <canvas id="myCanvas5" width="330" height="400"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <canvas id="myCanvas6" width="330" height="400"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="./ChiliDocs.html" class="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true" style="background-color:palevioletred;border: transparent;">  Let's Go !  </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sectionGradPepper">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="Font">Pepper helps in logging using .NET</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <canvas id="myCanvas7" width="330" height="400"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <canvas id="myCanvas8" width="330" height="400"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <canvas id="myCanvas9" width="330" height="400"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="./PepperDocs.html" class="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true" style="background-color:palevioletred;border: transparent;">  Let's Go !  </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="Footer"></div>
+
+    <script>
+        DrawOpenSource('myCanvas1', 160, 0.7, 0.3);
+        DrawOpenSource('myCanvas3', 160, 0.7, 0.3);
+
+        DrawAboutChiliGroups('myCanvas4', 'myCanvas5', 'myCanvas6');
+        DrawAboutChiliGroups('myCanvas7', 'myCanvas8', 'myCanvas9');
+
+        function DrawOpenSource(canvasId, radius, startAngle, endAngle) {
+
+            startAngle = startAngle * Math.PI;
+            endAngle = endAngle * Math.PI;
+            var mycanvas = document.getElementById(canvasId);
+            var context = mycanvas.getContext('2d');
+            var xPosition = mycanvas.width / 2;
+            var yPosition = mycanvas.height / 2;
+            var counterClockWise = false;
+            context.beginPath();
+
+            context.arc(xPosition, yPosition, radius, startAngle, endAngle, counterClockWise);
+
+            context.lineWidth = 20;
+            context.strokeStyle = 'rgba(255, 255, 255,1)';
+            context.stroke();
+
+            // Rectangle
+            context.lineWidth = 10;
+            context.lineJoin = "round";
+            context.strokeRect(80, 100, 200, 150);
+
+            //line
+            context.moveTo(180, 250);
+            context.lineTo(180, 280);
+            context.stroke();
+
+            //rect
+            context.strokeRect(120, 280, 120, 8);
+
+            if (canvasId == 'myCanvas1') {
+
+                //rect
+                context.strokeRect(100, 150, 3, 60);
+                context.strokeRect(120, 170, 3, 40);
+                context.strokeRect(140, 190, 3, 20);
+
+                //line
+                context.lineWidth = 8;
+                context.moveTo(170, 120);
+                context.lineTo(170, 230);
+                context.stroke();
+
+                context.beginPath();
+                context.arc(227, 177, 35, 0 * Math.PI, 1.5 * Math.PI, counterClockWise);
+                context.stroke();
+
+                context.moveTo(235, 134);
+                context.lineTo(235, 170);
+                context.stroke();
+
+                context.moveTo(231, 170);
+                context.lineTo(272, 170);
+                context.stroke();
+
+                context.beginPath();
+                context.arc(234, 173, 35, 1.5 * Math.PI, 0 * Math.PI, counterClockWise);
+                context.stroke();
+
+                context.fillStyle = "white";
+                context.fill();
+            }
+            if (canvasId == 'myCanvas3') {
+                //rect
+                context.strokeRect(120, 150, 120, 3);
+                context.strokeRect(120, 180, 120, 3);
+                context.strokeRect(120, 210, 60, 3);
+            }
+
+        }
+
+        function DrawAboutChiliGroups(canvasId4, canvasId5, canvasId6) {
+            var mycanvas = document.getElementById(canvasId4);
+            var context = mycanvas.getContext('2d');
+
+            //first 3 for laptop
+            // Rectangle
+            context.strokeStyle = 'black';
+            context.lineWidth = 10;
+            context.lineJoin = "round";
+            context.strokeRect(30, 100, 200, 150);
+
+            //rect
+            context.strokeRect(130, 250, 3, 30);
+
+            //rect
+            context.strokeRect(70, 280, 120, 8);
+
+
+            //for visual studio
+            //rect
+            context.strokeStyle = 'rgba(106, 48, 153,1)';
+            context.strokeRect(130, 160, 3, 40);
+            context.strokeRect(250, 140, 9, 80);
+
+            //line
+            context.moveTo(130, 200);
+            context.lineTo(250, 140);
+            context.stroke();
+
+            //line
+            context.moveTo(130, 160);
+            context.lineTo(250, 220);
+            context.stroke();
+
+            //+sign
+            context.strokeStyle = '#87d9b2';
+            context.beginPath();
+            context.arc(280, 180, 5, -0.5 * Math.PI, 1.5 * Math.PI, false);
+            context.stroke();
+            context.fillStyle = 'rgba(208, 148, 160,1)';
+            context.fill();
+
+            context.strokeStyle = '#87d9b2';
+            context.beginPath();
+            context.arc(310, 180, 8, -0.5 * Math.PI, 1.5 * Math.PI, false);
+            context.stroke();
+            context.fillStyle = 'rgba(208, 148, 160,1)';
+            context.fill();
+
+            //canvas5
+            var mycanvas = document.getElementById(canvasId5);
+            var context5 = mycanvas.getContext('2d');
+
+            //circle
+            context5.strokeStyle = '#87d9b2';
+            context5.beginPath();
+            context5.arc(180, 180, 150, -0.5 * Math.PI, 1.5 * Math.PI, false);
+            context5.stroke();
+            context5.fillStyle = 'rgba(208, 148, 160,1)';
+            context5.fill();
+
+            //chili +Pepper
+            context5.lineWidth = 2;
+            context5.font = "55px Segoi UI";
+            if (canvasId5 == "myCanvas5")
+                context5.strokeText(" { c h i l i }", 50, 195);
+            else
+                context5.strokeText("{ p e p p e r }", 30, 195);
+
+
+            //canvas6
+            var mycanvas = document.getElementById(canvasId6);
+            var context6 = mycanvas.getContext('2d');
+
+            // Rectangle
+            context6.strokeStyle = 'yellow';
+            context6.lineWidth = 10;
+            context6.lineJoin = "round";
+            context6.strokeRect(80, 20, 210, 350);
+            context6.strokeRect(80, 80, 210, 7);
+
+            //o/p
+            context6.lineWidth = 2;
+            context6.font = "30px Segoi UI";
+            if (canvasId6 == "myCanvas6") { 
+            context6.strokeText("{ ; } { j s o n }", 90, 140);
+            context6.strokeText("< / > < h t m l >", 90, 200);
+            }
+            else if (canvasId6 == "myCanvas9") {
+                context6.strokeText(" t e x t l o g s", 90, 140);
+                context6.strokeText(" s q l l o g s ", 90, 200);
+            }
+
+            if (canvasId6 == "myCanvas6") {
+                //lines for excel first box left hand side
+                context6.lineWidth = 4;
+                context6.moveTo(100, 240);
+                context6.lineTo(100, 280);
+                context6.stroke();
+
+                context6.moveTo(140, 230);
+                context6.lineTo(140, 290);
+                context6.stroke();
+
+                context6.moveTo(100, 240);
+                context6.lineTo(140, 230);
+                context6.stroke();
+
+                context6.moveTo(100, 280);
+                context6.lineTo(140, 290);
+                context6.stroke();
+
+                context6.moveTo(100, 280);
+                context6.lineTo(140, 290);
+                context6.stroke();
+
+                //outer of tiny boxes
+                context6.moveTo(140, 240);
+                context6.lineTo(170, 240);
+                context6.stroke();
+
+                context6.moveTo(140, 280);
+                context6.lineTo(170, 280);
+                context6.stroke();
+
+                context6.moveTo(170, 240);
+                context6.lineTo(170, 280);
+                context6.stroke();
+
+                //tiny boxes
+                context6.moveTo(140, 250);
+                context6.lineTo(170, 250);
+                context6.stroke();
+
+                context6.moveTo(140, 260);
+                context6.lineTo(170, 260);
+                context6.stroke();
+
+                context6.moveTo(140, 270);
+                context6.lineTo(170, 270);
+                context6.stroke();
+
+                context6.moveTo(150, 240);
+                context6.lineTo(150, 280);
+                context6.stroke();
+            }
+
+            context6.lineWidth = 2;
+            if (canvasId6 == "myCanvas6") {
+                context6.strokeText("e x c e l", 180, 265);
+            }
+            else if (canvasId6 == "myCanvas9") {
+                context6.strokeText("mo ng o logs", 100, 265);
+            }
+
+
+            if (canvasId6 == "myCanvas6") {
+                //for outlook logo
+                //lines for excel first box left hand side
+                context6.lineWidth = 4;
+                context6.moveTo(100, 310);
+                context6.lineTo(100, 350);
+                context6.stroke();
+
+                context6.moveTo(140, 300);
+                context6.lineTo(140, 360);
+                context6.stroke();
+
+                context6.moveTo(100, 310);
+                context6.lineTo(140, 300);
+                context6.stroke();
+
+                context6.moveTo(100, 350);
+                context6.lineTo(140, 360);
+                context6.stroke();
+
+                context6.lineWidth = 2;
+                context6.strokeText("O", 110, 340);
+
+                //outer of mail symbol
+                context6.lineWidth = 4;
+                context6.moveTo(140, 310);
+                context6.lineTo(170, 310);
+                context6.stroke();
+
+                context6.moveTo(140, 350);
+                context6.lineTo(170, 350);
+                context6.stroke();
+
+                context6.moveTo(170, 310);
+                context6.lineTo(170, 350);
+                context6.stroke();
+            }
+
+            context6.lineWidth = 2;
+            if (canvasId6 == "myCanvas6") {
+                context6.strokeText("m a i l", 180, 340);
+            }
+            else if (canvasId6 == "myCanvas9") {
+                //context6.strokeText("l o g s", 100, 340);
+            }
+
+            //double o
+            context6.lineWidth = 10;
+            context6.strokeStyle = 'rgba(208, 148, 160,1)';
+            context6.beginPath();
+            context6.arc(20, 180, 5, -0.5 * Math.PI, 1.5 * Math.PI, false);
+            context6.stroke();
+            context6.fillStyle = '#87d9b2';
+            context6.fill();
+
+            context6.beginPath();
+            context6.arc(50, 180, 8, -0.5 * Math.PI, 1.5 * Math.PI, false);
+            context6.stroke();
+                context6.fill();
+
+
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

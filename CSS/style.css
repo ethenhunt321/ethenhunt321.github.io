@@ -1,0 +1,230 @@
+﻿/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.Header {
+    background-color: #39b54a;
+    border-color: #39b54a;
+    height:58px;
+}
+
+.navbarstyle {
+    font-family: 'Segoe UI';
+    font-weight:lighter;
+    font-size: 20px;
+    background-color: #39b54a !important;
+}
+
+.navbar-toggle, .icon-bar {
+    border: 1px solid White;
+}
+
+.navbar .navbarstyle .dropdown .dropdown-menu li a{
+    color:white;
+    font-size:20px;
+    font-weight:lighter;
+}
+
+.right.carousel-control, .left.carousel-control {
+    opacity: 0;
+    display: none;
+    filter: alpha(opacity=0); /* IE support */
+}
+
+    .carousel-indicators li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 100);
+    border: 2px solid #ff6384;
+    border-radius: 10px;
+}
+
+.carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+}
+
+#carouselButtons {
+    margin-left: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.navbar .navbarstyle .dropdown a:focus {
+    color: green;
+    background-color: white !important;
+}
+
+    .navbar .navbarstyle .dropdown .dropdown-menu li a:hover {
+        color: green;
+        background-color: white !important;
+    }
+
+
+
+a {
+    color: white;
+    height: 58px;
+    padding-top: 18px !important;
+}
+
+.navbar .navbarstyle li a:hover {
+    color: green;
+    background-color: white !important;
+    height:58px;
+}
+
+.navbar .navbar-header a:hover {
+    color: green;
+    background-color: white !important;
+    height: 58px;
+}
+
+
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #28323c;
+    padding: 20px;
+    color: white;
+    font-family: 'Segoe UI';
+    margin-top: 60px;
+    margin-bottom:50px;
+}
+
+    footer .container .row div {
+        margin-bottom: 50px;
+        color: #8e9392;
+    }
+
+.carousel-inner img {
+    min-height: 200px;
+    margin:auto;
+}
+
+.carousel-inner .item .col-sm-4 div {
+    background-color: black;
+    color: burlywood;
+    opacity: 0.7;
+    position: relative;
+    text-align: center;
+    margin-top:30%;
+}
+
+.chiliDocs{
+    background-color: black;
+    color: burlywood;
+    opacity: 0.7;
+    position: relative;
+    text-align: center;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+    }
+}
+
+@media (max-width: 800px ){
+    .headingFontWithMargin{
+        margin-top: 8% !important;
+    }
+}
+
+@media (max-width: 540px)
+{
+    .carousel-inner .item img {
+        display: none;
+    }
+    .row .col-sm-8 img{
+        display:none;
+    }
+
+    /* Hiding images of chiliService*/
+}
+
+@media(max-width:767px)
+{
+    .carousel-inner .item .col-sm-4 div {
+        display: block;
+        margin-top: 10%;
+    }
+}
+
+/*--------------------------About Style-----------------------*/
+
+.headingFont {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+    font-size: 45px;
+}
+
+.headingFontWithMargin {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+    font-size: 45px;
+    margin-top: 25%;
+}
+
+.subHeadingFont {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+    font-size: 35px;
+}
+
+.contentFont {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+    font-size: 25px;
+}
+.Font {
+    color: white;
+    font-family: 'Segoe UI';
+}
+
+.container .row .col-sm-4 a:hover {
+    text-decoration:none;
+}
+
+#sectionGradChili {
+    margin-top: 20px;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    background: linear-gradient(to right,#ff6384,#b2b2b2,#85dbb2) !important;
+}
+
+#sectionGradPepper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to right,#b2b2b2,#85dbb2,#ff6384) !important;
+}
+
+
+/* --------------------------Chili Docs-----------------*/
+
+.backgroundChili {
+    background-color: rgba(255, 99, 132,1)
+}
+
+.Margins {
+    margin-top: 0px;
+    margin-left: 0%;
+    margin-right: 0%
+}
+
+.Padd {
+   padding:2%;
+}
+
+.TopBottomMargins{
+    margin-top: 10px;
+    margin-bottom:10px;
+}

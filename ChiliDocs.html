@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chili Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        LoadHeaderFooter();
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Installation</h1>
+                <h4> For Visual Studio IDE, the laziest way is to look on nuget package manager. Search with keyword chili.</h4>
+            </div>
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Integration</h1>
+                <h4> Chili must be integrated in a file where test runner looks at it in last before closing the application.  </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Coded UI</h2>
+                <h5>Implementation must be done in method with [AssemblyCleanup] attribute.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Selenium</h2>
+                <h5>Implementation must be done in method with [AssemblyCleanup] attribute.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Specfow</h2>
+                <h5>Implementation must be done in method with [AfterTestRun] attribute.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h2>Outlook</h2>
+                <h5>Present under chili namespace. Auto trigger mail from configured outlook with visual.</h5>
+                <p>
+                    <b>Outlook.SendMailViaOutlook(To List, DataTable, "Subject/Title", "Your additional Text");</b>
+                    <ul>
+                        <li><b>To List</b>:- Type of List of string. Give here all recipeients name.</li>
+                        <li><b>DataTable</b>:- Type of DataTable. Give here all Feature,TestCase Names and Outcomes in order mentioned.</li>
+                        <li><b>Subject/Title</b>:- Type of string. Give here your subject name or title of mail.</li>
+                        <li><b>Your additional Text</b>:- Type of string Geive here your addition message which need to be sent.</li>
+                    </ul>
+                </p>
+
+            </div>
+            <div class="col-sm-6 well chiliDocs">
+                <h2>Excel</h2>
+                <h5>Present under chili namespace. Gives an excel report with rich graphs.</h5>
+                <p>
+                    <b>ExcelReport.ExportExcelReport(DataTable, "Test Reports", "path",[featureList]);</b>
+                    <ul>
+                        <li><b>path</b>:- Type of string. Give here your directory name where report will be saved.</li>
+                        <li><b>DataTable</b>:- Type of DataTable. Give here all Feature,TestCase Names and Outcomes in order mentioned.</li>
+                        <li><b>Test Reports</b>:- Type of string. Give here your workbook name or sheet name of excel.</li>
+                        <li><b>[featureList]</b>:- Type of List of string. This is an optional parameter but its presence doesn't make any sence.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h2>DHTML</h2>
+                <h5>Present under chili namespace. Gives a dynamic html report with rich graphs.</h5>
+                <p>
+                    <b>Binders.CreateChiliReport(DataTable, "Test Report", "path");</b>
+                    <ul>
+                        <li><b>path</b>:- Type of string. Give here your directory name where report will be saved.</li>
+                        <li><b>DataTable</b>:- Type of DataTable. Give here all Feature,TestCase Names and Outcomes in order mentioned.</li>
+                        <li><b>Test Reports</b>:- Type of string. Give here your workbook name or sheet name of excel.</li>
+                        <li><b>Note</b>:-In First overload it expects total,pass and fail count.But its presence doesn't make any sence.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-sm-6 well chiliDocs">
+                <h2>JSON</h2>
+                <h5>Present under chili namespace. Gives a JSON report.</h5>
+                <p>
+                    <b>JSONReport.ExportJsonReport(DataTable, "path");</b><br /><br />
+                    <b>ExportJsonReport(DataTable);</b>
+                    <ul>
+                        <li><b>path</b>:- Type of string. Give here your directory name where report will be saved.</li>
+                        <li><b>DataTable</b>:- Type of DataTable. Give here all Feature,TestCase Names and Outcomes in order mentioned.</li>
+                        <li><b>Note</b>:-In First overload it expects just one parameter. Post using this overloaded method you can store result back to a string variable.</li>
+                    </ul>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row chiliDocs well">
+            <a href="https://www.nuget.org/packages/Chili.Amardeep_Agrawal/">
+                <div class="col-sm-12">
+                   <h2 style="color: burlywood;"> Let's Go !</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="Footer"></div>
+
+</body>
+</html>
+
+
+
+
+
+
