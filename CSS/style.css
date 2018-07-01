@@ -207,6 +207,13 @@ footer {
     background: linear-gradient(to right,#b2b2b2,#85dbb2,#ff6384) !important;
 }
 
+#sectionGradCapsicum{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(to right,#85dbb2,#b2b2b2,#ff6384) !important;
+}
+
 
 /* --------------------------Chili Docs-----------------*/
 

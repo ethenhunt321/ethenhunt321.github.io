@@ -33,13 +33,7 @@
                     <a href="#">
                         <h3 class="Font">Open Source Api Consumer</h3>
                     </a>
-                    <canvas id="myCanvas2" width="360" height="200"></canvas>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                            Coming Soon !
-                        </div>
-                    </div>
-                    <canvas id="myCanvas2and" width="360" height="150"></canvas>
+                    <canvas id="myCanvas2" width="360" height="400"></canvas>
                 </div>
                 <div class="col-sm-4">
                     <a href="https://www.nuget.org/packages/Pepper">
@@ -110,15 +104,44 @@
         </div>
     </section>
 
+    <section id="sectionGradCapsicum">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="Font">Capsicum helps in api testing using .NET</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <canvas id="myCanvas10" width="330" height="400"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <canvas id="myCanvas11" width="330" height="400"></canvas>
+                </div>
+                <div class="col-sm-4">
+                    <canvas id="myCanvas12" width="330" height="400"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="./CapsicumDocs.html" class="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true" style="background-color:palevioletred;border: transparent;">  Let's Go !  </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <div id="Footer"></div>
 
     <script>
         DrawOpenSource('myCanvas1', 160, 0.7, 0.3);
+        DrawOpenSource('myCanvas2', 160, 0.7, 0.3);
         DrawOpenSource('myCanvas3', 160, 0.7, 0.3);
 
         DrawAboutChiliGroups('myCanvas4', 'myCanvas5', 'myCanvas6');
         DrawAboutChiliGroups('myCanvas7', 'myCanvas8', 'myCanvas9');
+        DrawAboutChiliGroups('myCanvas10', 'myCanvas11', 'myCanvas12');
 
         function DrawOpenSource(canvasId, radius, startAngle, endAngle) {
 
@@ -129,6 +152,7 @@
             var xPosition = mycanvas.width / 2;
             var yPosition = mycanvas.height / 2;
             var counterClockWise = false;
+            var clockWise = true;
             context.beginPath();
 
             context.arc(xPosition, yPosition, radius, startAngle, endAngle, counterClockWise);
@@ -187,6 +211,30 @@
                 context.strokeRect(120, 150, 120, 3);
                 context.strokeRect(120, 180, 120, 3);
                 context.strokeRect(120, 210, 60, 3);
+            }
+            if(canvasId=='myCanvas2'){
+                
+                //line
+                context.lineWidth = 8;
+                context.moveTo(120, 221);
+                context.lineTo(230, 221);
+                context.stroke();
+
+                //left arc
+                context.beginPath();
+                context.arc(124, 191, 30, 0.5 * Math.PI, 1.5 * Math.PI, counterClockWise);
+                context.stroke();
+
+                //right arc
+                context.beginPath();
+                context.arc(227, 186, 35, 0.5 * Math.PI, 1.1 * Math.PI, clockWise);
+                context.stroke();
+
+                //middle arc
+                context.beginPath();
+                context.arc(160, 165, 35, 1 * Math.PI, 0.1 * Math.PI, counterClockWise);
+                context.stroke();
+
             }
 
         }
@@ -252,14 +300,17 @@
             context5.fillStyle = 'rgba(208, 148, 160,1)';
             context5.fill();
 
-            //chili +Pepper
+            //chili +Pepper+capsicum
             context5.lineWidth = 2;
             context5.font = "55px Segoi UI";
             if (canvasId5 == "myCanvas5")
                 context5.strokeText(" { c h i l i }", 50, 195);
-            else
+
+            else if(canvasId5="myCanvas8")
                 context5.strokeText("{ p e p p e r }", 30, 195);
 
+            else if(canvasId5="myCanvas11")
+                context5.strokeText("{ t t }", 30, 195);
 
             //canvas6
             var mycanvas = document.getElementById(canvasId6);
