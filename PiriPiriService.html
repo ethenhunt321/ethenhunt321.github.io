@@ -195,11 +195,36 @@
             var jsonmycanvas = document.getElementById(canvasId4);
             var json = jsonmycanvas.getContext('2d');
 
-            json.strokeStyle = '#6847aa'
-            json.lineWidth = 10;
-            json.font = "60px Segoi UI";
-            json.strokeText("{ ; }", x, eachSide / 2 - paddingy / 2);
+            json.lineWidth = 6;
+            json.strokeStyle="blue";
+            
+            x=y=20
+            //upper line
+            json.moveTo(x,y);
+            json.lineTo(eachSide-x,y);
+            json.stroke();
 
+            //lower line
+            json.moveTo(x,eachSide-y);
+            json.lineTo(eachSide-x,eachSide-y);
+            json.stroke();
+
+            //left line
+            json.moveTo(x+3,y);
+            json.lineTo(x+3,eachSide-y);
+            json.stroke();
+
+             //right line
+            json.moveTo(eachSide-x-3,y);
+            json.lineTo(eachSide-x-3,eachSide-y);
+            json.stroke();
+
+            //rect fill
+            json.fillStyle ="red";
+            json.fillRect(2*x,1.5*y,6*x,3*y);
+
+            json.fillStyle ="green";
+            json.fillRect(2*x,5.5*y,6*x,3*y);
 
         }
 
