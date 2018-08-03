@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PiriPiri Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        LoadHeaderFooter();
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Installation</h1>
+                <h4> For Visual Studio IDE, the laziest way is to look on nuget package manager. Search with keyword PiriPiri.</h4>
+            </div>
+            <div class="col-sm-6 well chiliDocs">
+                <h1>Integration</h1>
+                <h4> PiriPiri must be integrated in a class file where you want a page object model design pattern.  </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Coded UI</h2>
+                <h5>Implementation must be done in Class with [FindsBy] attribute.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Selenium</h2>
+                <h5>Not applicable. [FindsBy] attribute is only applicable for Coded UI.</h5>
+            </div>
+            <div class="col-sm-4 well chiliDocs">
+                <h2>Specfow</h2>
+                <h5>Not applicable. [FindsBy] attribute is only applicable for Coded UI.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 well chiliDocs">
+                <h2>FindsBy</h2>
+                <h5>Present under PiriPiri namespace. Decorate Property to find HtmlControls.</h5>
+                <p>
+                    <b>[FindsBy(How:"Id", Using:"pass")]</b>
+                    <ul>
+                        <li><b>How</b>:- Type of string. Give here SearchProperties to find controls like Id (exactally given by coded ui).</li>
+                        <li><b>Using</b>:- Type of string. Give here value of SearchProperties to find controls.</li>
+                    </ul>
+                </p>
+
+            </div>
+            <div class="col-sm-6 well chiliDocs">
+                <h2>POM</h2>
+                <h5>Present under PiriPiri namespace. Finds decorated HtmlControl property from web.</h5>
+                <p>
+                    <b>POM pom= new POM(BrowserWindow,Type);</b>
+                    <ul>
+                        <li><b>BrowserWindow</b>:- Type of BrowserWindow. Give here current instance of browser window.</li>
+                        <li><b>Type</b>:- Type of typeof(Current Class). Give here current class name.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        
+        </div>
+
+        <div class="row chiliDocs well">
+            <a href="https://www.nuget.org/packages/PiriPiri/">
+                <div class="col-sm-12">
+                   <h2 style="color: burlywood;"> Let's Go !</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="Footer"></div>
+
+</body>
+</html>
+
+
+
+
+
+

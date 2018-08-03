@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PiriPiri Service</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <script>
+        LoadHeaderFooter();
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+
+    <div class="row Margins">
+        <div class="col-sm-4" style="margin-bottom:5%;">
+            <h1 class="headingFontWithMargin"> PiriPiri - Enable CodedUI now with Page Object Model.</h1>
+            <div>
+                <br />
+                <a class="btn btn-primary btn-lg" href="https://www.nuget.org/packages/PiriPiri/" style="background-color:#39b54a">Get Now for .NET</a>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <img src="./Images/PiriPiriService.png" class="img-responsive" style="" />
+        </div>
+    </div>
+
+    <div class="row Margins" style="background-color:#f5f5f5;">
+        <div class="col-sm-12 text-center">
+            <h1 class="headingFont">PiriPiri - an efficient nuget package that helps in codedUI automation with respect to maintainability.</h1>
+        </div>
+    </div>
+
+    <div class="row Margins" style="background-color:#f5f5f5;">
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="locate" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Locate your controls</h2>
+            <p class="contentFont">Now get more done, with more ease.</p>
+        </div>
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="action1" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Action with controls</h2>
+            <p class="contentFont">Manage your controls with specific actions.</p>
+        </div>
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="action2" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Interact with website</h2>
+            <p class="contentFont">Dynamic interaction with page under test.</p>
+        </div>
+        <div class="col-sm-3 text-center" style="margin-top:2%">
+            <canvas id="maintainability" width="200" height="200"></canvas>
+            <h2 class="subHeadingFont">Gives the maintainability</h2>
+            <p class="contentFont">Gives maintainability in few code changes.</p>
+        </div>
+    </div>
+
+
+    <div class="row" style="
+    margin-top: 20PX;">
+        <div class="col-sm-8 text-center">
+            <img src="./Images/piripiricode.png" class="img-responsive"/>
+        </div>
+        <div class="col-sm-3 text-center"><h1 class="headingFontWithMargin">How to code - This shows how to enable page object model with PiriPiri.</h1></div>
+    </div>
+
+    <div id="Footer"></div>
+
+    <script>
+        Draw('locate', 'action1', 'action2', 'maintainability');
+
+        function Draw(canvasId1, canvasId2, canvasId3, canvasId4) {
+
+            var locatemycanvas = document.getElementById(canvasId1);
+            var outlook = locatemycanvas.getContext('2d');
+
+            x = 147; //start point
+            y = 100; //start point
+            paddingx = 40;
+            paddingy = 40;
+            eachSide = 200;
+
+            outlook.lineWidth = 10;
+            outlook.strokeStyle = 'blue';
+
+            //left most line
+            outlook.moveTo(x, y);
+            outlook.lineTo(2*x, 2*y);
+            outlook.stroke();
+
+
+            //printing o
+            outlook.lineWidth = 8;
+            outlook.beginPath();
+            outlook.arc(100,75,50,0,2*Math.PI);
+            outlook.stroke();
+
+            //excel
+            var excelmycanvas = document.getElementById(canvasId2);
+            var excel = excelmycanvas.getContext('2d');
+
+            excel.strokeStyle = 'green';
+            excel.lineWidth = 8;
+
+            x=40;
+            y=40;
+
+            //left most line
+            excel.moveTo(x+4, y);
+            excel.lineTo(x+4, eachSide - 2 * paddingy);
+            excel.stroke();
+
+            //right most line
+            excel.moveTo(eachSide - paddingx-4, y);
+            excel.lineTo(eachSide - paddingx-4, eachSide - 2 * paddingy);
+            excel.stroke();
+
+            //joing left line to middile line upper part
+            excel.moveTo(x, y);
+            excel.lineTo(eachSide - paddingx,y);
+            excel.stroke();
+
+            //tech line
+            excel.moveTo(x, y);
+            excel.lineTo(eachSide - paddingx-20, y/4);
+            excel.stroke();
+
+            //joing left line to middile line lower part
+            excel.moveTo(x, eachSide - 2 * paddingy);
+            excel.lineTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy);
+            excel.stroke();
+
+            //joing middle line to right line upper part
+            excel.moveTo(eachSide - 2 * paddingx, y);
+            excel.lineTo(eachSide - paddingx, y);
+            excel.stroke();
+
+            //joing middle line to right line lower part
+            excel.moveTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy);
+            excel.lineTo(eachSide - paddingx, eachSide - 2 * paddingy);
+            excel.stroke();
+
+            //html
+            var htmlmycanvas = document.getElementById(canvasId3);
+            var html = htmlmycanvas.getContext('2d');
+
+            html.lineWidth=excel.lineWidth;
+            html.strokeStyle = 'blue';
+
+            //left most line
+            html.moveTo(x+4, y);
+            html.lineTo(x+4, eachSide - 2 * paddingy);
+            html.stroke();
+
+            //right most line
+            html.moveTo(eachSide - paddingx+30, y);
+            html.lineTo(eachSide - paddingx+30, eachSide - 2 * paddingy);
+            html.stroke();
+
+            //joing left line to middile line upper part
+            html.moveTo(x, y);
+            html.lineTo(eachSide - paddingx+34,y);
+            html.stroke();
+
+            //joing left line to middile line lower part
+            html.moveTo(x, eachSide - 2 * paddingy);
+            html.lineTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy);
+            html.stroke();
+
+            //joing middle line to right line upper part
+            html.moveTo(eachSide - 2 * paddingx, y);
+            html.lineTo(eachSide - paddingx, y);
+            html.stroke();
+
+            //joing middle line to right line lower part
+            html.moveTo(eachSide - 2 * paddingx, eachSide - 2 * paddingy);
+            html.lineTo(eachSide - paddingx+34, eachSide - 2 * paddingy);
+            html.stroke();
+
+
+            html.strokeStyle = 'purple'
+            html.lineWidth = 4;
+            html.font = "40px Segoi UI";
+            html.strokeText(" t y p e |", x+5, eachSide / 2 - paddingy / 2+10);
+
+            //json
+            var jsonmycanvas = document.getElementById(canvasId4);
+            var json = jsonmycanvas.getContext('2d');
+
+            json.strokeStyle = '#6847aa'
+            json.lineWidth = 10;
+            json.font = "60px Segoi UI";
+            json.strokeText("{ ; }", x, eachSide / 2 - paddingy / 2);
+
+
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
