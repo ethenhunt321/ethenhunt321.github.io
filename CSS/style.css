@@ -235,3 +235,33 @@ footer {
     margin-top: 10px;
     margin-bottom:10px;
 }
+
+.Language {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-bottom: 3px;
+    color: #1a668c;
+}
+
+.EachLanguage {
+    text-decoration: none;
+    padding:5px;
+}
+
+.EachLanguage:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.Fourcol {
+    margin-top: 60px;
+    border-right: 1px groove;
+    font-family: 'Segoe UI';
+    font-size: large;
+}
+
+.Eightcol {
+    margin-top: 70px;
+    font-family: 'Segoe UI';
+    font-size: large;
+}

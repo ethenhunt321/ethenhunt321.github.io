@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chili Tutorial</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-debug.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js></script>
+    <script>
+        LoadHeaderFooter();
+        
+        window.onload=function(){
+            ko.applyBindings(new bindLanguage());
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div id="Header"></div>
+
+    <div class="row">
+        <div class="col-sm-4 Fourcol">
+            <div data-bind='foreach: language' class='Language'>
+                <div data-bind='{text:$data,click:SetLanguage($data)}' class='EachLanguage'></div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="Eightcol">
+                    <h1 id='selected'></h1>
+                    <div id='codes'></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Footer"></div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
