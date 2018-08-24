@@ -1,1 +1,102 @@
-<h1> this is a coded ui code... comming soon.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coded UI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <script type="text/javascript" src="./Scripts/myscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-debug.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js></script>
+
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-sm-10 Language" style="color:black">
+            <article>
+            <h4>
+             <p>Hope you have installed chili first before starting off.</p>
+             <p>use the following namespaces</p>
+             
+             <pre>
+                 <code>
+             using Microsoft.VisualStudio.TestTools.UnitTesting;
+             using System.Data;
+             using System.Collections.Generic;
+             using System.Linq;
+             using Chili;
+            </code>
+             </pre>
+             
+             <p>Create a class inside your project and name it Report.cs and associate it with attribute [TestClass] as well. Declare followings variables.</p>
+              
+             <pre>
+             <code>
+              private static DataTable DataTable = null;
+              private static int Passed = 0;
+             </code>
+             </pre>
+              
+             <p>Create a method with [AssemblyInitialize] </p>
+
+             <pre>
+             <code>[AssemblyInitialize]
+             public static void CreateTableFormat(TestContext t)
+             {
+                 DataTable = new DataTable();
+                 DataTable.Columns.Add("Feature");
+                 DataTable.Columns.Add("Test Case Name");
+                 DataTable.Columns.Add("Outcome");
+             }
+            </code>
+            </pre>
+             <p>Create a method as below with no attribute</p>
+
+             <pre>
+                 <code>
+              public static void CreateReport(string feature,string testcaseName,string outcome)
+              {
+                  DataRow newrow = DataTable.NewRow();
+                  newrow[0] = feature;
+                  newrow[1] = testcaseName;
+                  newrow[2] = outcome;
+                  if (outcome.Equals("Passed"))
+                     Passed++;
+                  DataTable.Rows.Add(newrow);
+              }
+                 </code>
+             </pre>
+
+             <p>Create a method with [AssemblyCleanup] </p>
+
+             <pre>
+                 <code>
+
+                 </code>
+             </pre>
+            
+
+            [TestCleanup()]
+             public void MyTestCleanup()
+            {
+            Report.CreateReport(this.GetType().Name,"TestContext.TestName","Failed");
+            }
+        </article>
+    </h4>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
