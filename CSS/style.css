@@ -265,3 +265,7 @@ footer {
     font-family: 'Segoe UI';
     font-size: large;
 }
+
+pre{
+    width: fit-content;
+}
