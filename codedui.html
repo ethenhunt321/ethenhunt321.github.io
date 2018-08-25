@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Coded UI</title>
     <meta charset="utf-8">
@@ -15,88 +16,76 @@
     <script src=https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js></script>
 
 </head>
+
 <body>
 
     <div class="row">
         <div class="col-sm-10 Language" style="color:black">
             <article>
-            <h4>
-             <p>Hope you have installed chili first before starting off.</p>
-             <p>use the following namespaces</p>
-             
-             <pre>
-                 <code>
-             using Microsoft.VisualStudio.TestTools.UnitTesting;
-             using System.Data;
-             using System.Collections.Generic;
-             using System.Linq;
-             using Chili;
-            </code>
-             </pre>
-             
-             <p>Create a class inside your project and name it Report.cs and associate it with attribute [TestClass] as well. Declare followings variables.</p>
-              
-             <pre>
-             <code>
-              private static DataTable DataTable = null;
-              private static int Passed = 0;
-             </code>
-             </pre>
-              
-             <p>Create a method with [AssemblyInitialize] </p>
+                <h4>
+                    <p>Hope you have installed chili first before starting off.</p>
+                    
+                    <p>Create a class inside your project and name it Report.cs and associate it with attribute [TestClass]
+                            as well. Declare followings variables.</p>
+    <pre>
+        <code>
+Create Code Block E.
+        </code>
+    </pre>
+                            <p>use the following namespaces.</p>
+    <pre>
+        <code>
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Data;
+using System.Collections.Generic;
+using System.Linq;
+using Chili;
+        </code>
+    </pre>
 
-             <pre>
-             <code>[AssemblyInitialize]
-             public static void CreateTableFormat(TestContext t)
-             {
-                 DataTable = new DataTable();
-                 DataTable.Columns.Add("Feature");
-                 DataTable.Columns.Add("Test Case Name");
-                 DataTable.Columns.Add("Outcome");
-             }
-            </code>
-            </pre>
-             <p>Create a method as below with no attribute</p>
+                    
 
-             <pre>
-                 <code>
-              public static void CreateReport(string feature,string testcaseName,string outcome)
-              {
-                  DataRow newrow = DataTable.NewRow();
-                  newrow[0] = feature;
-                  newrow[1] = testcaseName;
-                  newrow[2] = outcome;
-                  if (outcome.Equals("Passed"))
-                     Passed++;
-                  DataTable.Rows.Add(newrow);
-              }
-                 </code>
-             </pre>
+                   
 
-             <p>Create a method with [AssemblyCleanup] </p>
+                    <p>Create a method with [AssemblyInitialize] </p>
 
-             <pre>
-                 <code>
+    <pre>
+        <code>
+[AssemblyInitialize]
+Create Code Block A from common.
+        </code>
+    </pre>
+                    <p>Create a method as below with no attribute</p>
 
-                 </code>
-             </pre>
-            
+    <pre>
+        <code>
+Create method CreateReport() Code Block B from common.                 
+        </code>
+    </pre>
 
-            [TestCleanup()]
-             public void MyTestCleanup()
-            {
-            Report.CreateReport(this.GetType().Name,"TestContext.TestName","Failed");
-            }
-        </article>
-    </h4>
+                    <p>Create a method with [AssemblyCleanup] </p>
+
+    <pre>
+        <code>
+[AssemblyCleanup]
+Create Code Block C from common.      
+        </code>
+    </pre>
+
+                    <p>Now the final step is to configure test [TestCleanup]. Go to each coded ui file and paste the below line
+                        of code in MyTestCleanup().</p>
+
+    <pre>
+        <code>
+[TestCleanup()]
+Create Code Block D from common. 
+        </code>
+    </pre>
+
+            </article>
+            </h4>
         </div>
     </div>
 </body>
+
 </html>
-
-
-
-
-
-
-

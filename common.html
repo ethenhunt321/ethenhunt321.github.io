@@ -16,11 +16,70 @@
 
 </head>
 <body>
-    <h1> This code will remain same across all of the languages </h1>
-    <h3>
-        Hope you have installed chili first before starting off.
-        
-    </h3>
+        <div class="row">
+                <div class="col-sm-10 Language" style="color:black">
+                        <h3>Hope you have installed chili first before starting off.</h3>
+                    <h4>Code Block A</h4>
+                    <pre>
+                        <code>
+public static void CreateTableFormat(TestContext t)
+{
+    DataTable = new DataTable();
+    DataTable.Columns.Add("Feature");
+    DataTable.Columns.Add("Test Case Name");
+    DataTable.Columns.Add("Outcome");
+}
+                        </code>
+                    </pre>
+                    <h4>Code Block B</h4>
+                    <pre>
+                        <code>
+public static void CreateReport(string feature,string testcaseName,string outcome)
+{
+    DataRow newrow = DataTable.NewRow();
+    newrow[0] = feature;
+    newrow[1] = testcaseName;
+    newrow[2] = outcome;
+    if (outcome.Equals("Passed"))
+        Passed++;
+    DataTable.Rows.Add(newrow);
+}
+                  
+                        </code>
+                    </pre>
+
+                    <h4>Code Block C</h4>
+                    <pre>
+                        <code>
+public static void CreateChiliReport()
+{
+    string path = "H:\\Chili";
+    Binders.CreateChiliReport(DataTable, "Test Report Test Report Test Report Test Report", path);
+    ExcelReport.ExportExcelReport(DataTable, "Test Reports", path);
+    JSONReport.ExportJsonReport(DataTable, path);
+    Outlook.SendMailViaOutlook(new List<string> { "ethenhunt321@outlook.com" }, DataTable, "Title", "Your additional Test");
+}                            
+                        </code>
+                    </pre>
+                    <h4>Code Block D</h4>
+                    <pre>
+                        <code>
+public void MyTestCleanup()
+{
+    Report.CreateReport(this.GetType().Name,this.TestContext.TestName,this.TestContext.CurrentTestOutcome.ToString());
+}
+                        </code>
+                    </pre>
+
+                    <h4>Code Block E</h4>
+                    <pre>
+                        <code>
+private static DataTable DataTable = null;
+private static int Passed = 0;
+                        </code>
+                    </pre>
+                </div>
+        </div> 
 </body>
 </html>
 
