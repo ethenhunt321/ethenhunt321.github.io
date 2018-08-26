@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head  class="Tutorials">
     <title>Chili Tutorial</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,17 +23,17 @@
     </script>
 
 </head>
-<body>
+<body class="Tutorials">
 
     <div id="Header"></div>
 
     <div class="row">
-        <div class="col-sm-4 Fourcol">
+        <div class="col-sm-3 Fourcol">
             <div data-bind='foreach: language' class='Language'>
                 <div data-bind='{text:$data,click:SetLanguage($data)}' class='EachLanguage'></div>
             </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
             <div class="Eightcol">
                     <h1 id='selected' class='Language'></h1>
                     <div id='codes' class='Language'></div>

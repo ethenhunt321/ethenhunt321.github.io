@@ -269,3 +269,8 @@ footer {
 pre{
     width: fit-content;
 }
+
+.Tutorials{
+    overflow-x: hidden;
+    max-width: 100%;
+}
