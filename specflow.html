@@ -50,7 +50,7 @@ using Chili;
     <pre>
         <code>
 [BeforeTestRun]
-Create Code Block A from common.
+Create Code Block A from common without parameter TestContext t.
         </code>
     </pre>
                     <p>Create a method as below with no attribute</p>
@@ -71,7 +71,9 @@ Create Code Block C from common.
     </pre>
 
                     <p>Now the final step is to configure test [AfterScenario]. Go to each Selenium file and paste the below line
-                        of code in MyTestCleanup().</p>
+                        of code in MyTestCleanup(). Replace <b>this.GetType().Name</b> with <b>FeatureContext.Current.FeatureInfo.Title</b>,<b>this.TestContext.TestName</b> 
+                        with <b>ScenarioContext.Current.ScenarioInfo.Title</b> and <b>this.TestContext.CurrentTestOutcome.ToString()</b> with your <b>Scenario outcome</b>. 
+                        For the outcome you can refer to <a href="https://groups.google.com/forum/#!topic/specflow/tZxXE4u-Jag" style="color:black;text-decoration: underline">this</a> </p>
 
     <pre>
         <code>
