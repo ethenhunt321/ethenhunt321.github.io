@@ -1,1 +1,54 @@
-upcoming
+CHILI LICENSE TERMS
+
+=======================================================================================================================================================================
+
+These license terms are an agreement between Chili Corporation (or based on where you live, one of its affiliates) and you. Please read them. They apply to the package named above, which includes the media on which you received it, if any. The terms also apply to any Chili
+•	updates,
+•	supplements,
+•	Internet-based services, and 
+•	support services
+for this package,unless other terms accompany those items. If so, those terms apply.
+By using the package,you accept these terms. If you do not accept them, do not use the package.
+
+=======================================================================================================================================================================
+
+If you comply with these license terms, you have the rights below.
+
+1.	INSTALLATION AND USE RIGHTS. You may install and use any number of copies of the package on your devices to design, develop and test your programs.
+2.	ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.
+	a.	Distributable Code. The package contains code that you are permitted to distribute in programs you develop if you comply with the terms below.
+		i.	Right to Use and D The code and text files listed below are “Distributable Code.”
+			•	Third Party Distribution. You may permit distributors of your programs to copy and distribute the Distributable Code as part of those 				programs.
+		ii.	Distribution Requirements. For any Distributable Code you distribute, you must
+			•	add significant primary functionality to it in your programs;
+			•	require distributors and external end users to agree to terms that protect it at least as much as this agreement; 
+			•	display your valid copyright notice on your programs; and
+			•	indemnify, defend, and hold harmless Chili from any claims, including attorneys’ fees, related to the distribution or use of your 				programs.
+		iii.	Distribution Restrictions. You may not
+			•	alter any copyright, trademark or patent notice in the Distributable Code; 
+			•	use Chili’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Chili; 
+			•	distribute Distributable Code to run on a platform.
+			•	include Distributable Code in malicious, deceptive or unlawful programs; or
+			•	modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An 					Excluded License is one that requires, as a condition of use, modification or distribution, that
+			•	the code be disclosed or distributed in source code form; or 
+			•	others have the right to modify it.
+3.	SCOPE OF LICENSE. The package is licensed, not sold. This agreement only gives you some rights to use the package. Chili reserves all other rights. 			Unless applicable law gives you more rights despite this limitation, you may use the package only as expressly permitted in this agreement. In doing so, you 		must comply with any technical limitations in the package that only allow you to use it in certain ways. You may not
+		•	work around any technical limitations in the package;
+		•	reverse engineer, decompile or disassemble the package, except and only to the extent that applicable law expressly permits, despite 			this limitation;
+		•	make more copies of the package than specified in this agreement or allowed by applicable law, despite this limitation;
+		•	publish the package for others to copy;
+		•	rent, lease or lend the package;
+		•	transfer the package or this agreement to any third party; or
+		•	use the package for commercial software hosting services.
+4.	BACKUP COPY. You may make one backup copy of the package. You may use it only to reinstall the package.
+5.	DOCUMENTATION. Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.
+6.	TRANSFER TO ANOTHER DEVICE. You may uninstall the package and install it on another device for your use. 
+7.	EXPORT RESTRICTIONS. The package is subject to Indian export laws and regulations. 
+8.	SUPPORT SERVICES. Because this package is “as is,” we may not provide support services for it.
+9.	ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement 		for the software and support services.
+10.	APPLICABLE LAW.
+	a.	India. If you acquired the package in the India, Indian law governs the interpretation of this agreement and applies to claims for breach of it, 		regardless of conflict of laws principles. The laws of the state where you live govern all other claims, including claims under state consumer 		protection laws, unfair competition laws, and in tort.
+	b.	Outside the India. If you acquired the package in any other country, the laws of that country apply.
+11.	LEGAL EFFECT. This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to 	the party from whom you acquired the package. This agreement does not change your rights under the laws of your country if the laws of your country do not 		permit it to do so.
+12.	DISCLAIMER OF WARRANTY. The package is licensed “as-is.” You bear the risk of using it. Chili gives no express warranties, guarantees or conditions. You 		may have additional consumer rights under your local laws which this agreement cannot change. To the extent permitted under your local laws, Chili excludes 		the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
+
